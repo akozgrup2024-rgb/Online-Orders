@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Online Orders</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff8f2;
+        color: #333;
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ffd3b6;
+      }
+      h1 {
+        text-align: center;
+        color: #d35400;
+      }
+      label {
+        display: block;
+        margin-top: 12px;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        background-color: #d35400;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+        font-size: 16px;
+      }
+      button:hover {
+        background-color: #e67e22;
+      }
+      .item {
+        margin: 5px 0;
+      }
+      /* code */
+      .corner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        /* background: linear-gradient(135deg, #f8f9fa, #e3f2fd); */
+        text-align: center;
+      }
+
+      .corner h1 {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* space between logo and text */
+        font-size: 30px;
+        font-weight: 700;
+        color: #1e88e5; /* calm blue tone */
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: linear-gradient(90deg, #1565c0, #d8a51a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .corner img:hover {
+        transform: scale(1.1);
+      }
+
+      /* Subtle fade-in animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="corner">
+      <h1>
+        <img src="assets/ak-logo.png" height="80px" alt="Ak Özgrup Logo" />
+
+        ONLINE ORDERING FORM
+      </h1>
+    </div>
+
+    <form id="orderForm">
+      <label>👤 Name:</label>
+      <input type="text" name="name" required />
+
+      <label>📞 Phone:</label>
+      <input type="text" name="phone" required />
+
+      <label>📍 Address:</label>
+      <textarea name="address" required></textarea>
+
+      <label>📅 Date:</label>
+      <input type="date" name="date" required />
+
+      <label>⏰ Time:</label>
+      <input type="time" name="time" required />
+
+      <!-- whatsapp -->
+
+      <label>Browse Our Catalog:</label>
+      <div class="whatsapp-catalog">
+        <a
+          href="https://wa.me/c/905063591284"
+          target="_blank"
+          class="catalog-btn"
+        >
+          🛒 View WhatsApp Catalog
+        </a>
+      </div>
+
+      <!-- /whatsapp -->
+
+      <!-- <label>🍽️ Select Items:</label>
+      <div class="item">
+        <input type="checkbox" name="item" value="Qeema Paratha" /> Qeema
+        Paratha (70 TL)
+      </div>
+      <div class="item">
+        <input type="checkbox" name="item" value="Aalu Paratha" /> Aalu Paratha
+        (60 TL)
+      </div>
+      <div class="item">
+        <input type="checkbox" name="item" value="Chicken Cheese Paratha" />
+        Chicken Cheese Paratha (80 TL)
+      </div>
+      <div class="item">
+        <input type="checkbox" name="item" value="Halwa Puri" /> Halwa Puri (90
+        TL)
+      </div>
+      <div class="item">
+        <input type="checkbox" name="item" value="Mini Pizza" /> Mini Pizza (50
+        TL)
+      </div> -->
+
+      <label>🗒️ Note:</label>
+      <textarea
+        name="note"
+        placeholder="Any special instructions..."
+      ></textarea>
+
+      <label>💰 Total (TL):</label>
+      <input type="number" name="total" required />
+
+      <button type="submit">Submit Order</button>
+    </form>
+
+    <p
+      id="response"
+      style="text-align: center; font-weight: bold; margin-top: 20px"
+    ></p>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbw_hQgVMLZ4rFkPfQrr_c7b2jYkmgHlUxYMBxu86i6tggW-tUJxfGc0AFMYpVOvHJP9/exec"; // replace with your Apps Script URL
+
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const form = e.target;
+
+          const items = Array.from(
+            form.querySelectorAll('input[name="item"]:checked')
+          ).map((i) => ({
+            name: i.value,
+            qty: 1,
+            subtotal: 0,
+          }));
+
+          const data = {
+            name: form.name.value,
+            phone: form.phone.value,
+            address: form.address.value,
+            date: form.date.value,
+            time: form.time.value,
+            note: form.note.value,
+            items: items,
+            total: form.total.value,
+          };
+
+          try {
+            const response = await fetch(scriptURL, {
+              method: "POST",
+              body: JSON.stringify(data), // no headers needed
+            });
+
+            const result = await response.json();
+
+            if (result.result === "success") {
+              document.getElementById(
+                "response"
+              ).innerText = `✅ Order placed successfully! Your Order ID: ${result.orderId}`;
+              form.reset();
+            } else {
+              document.getElementById(
+                "response"
+              ).innerText = `❌ Error: ${result.message}`;
+            }
+          } catch (err) {
+            document.getElementById(
+              "response"
+            ).innerText = `❌ Submission failed: ${err}`;
+          }
+        });
+    </script>
+  </body>
+</html>
