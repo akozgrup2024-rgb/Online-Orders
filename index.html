@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AK Özgrup Online Store</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="assets/ak-logo.png" alt="Company Logo" />
+      <h1>Ak Özgrup Online Store</h1>
+
+      <!-- Language Buttons -->
+      <div class="lang-container">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="tr">TR</button>
+      </div>
+
+      <h2 id="welcome-text">Welcome!</h2>
+    </header>
+
+    <!-- Products Container -->
+    <div class="product-container">
+      <div
+        class="product-card"
+        data-index="1"
+        data-price="250"
+        data-img="assets/dal chana.jpg"
+      >
+        <div class="product-img-container">
+          <img src="assets/dal chana.jpg" alt="Dal Channa" />
+        </div>
+
+        <div class="product-details">
+          <h3 data-en="Dal Channa" data-tr="Nohut">Dal Channa</h3>
+
+          <p data-en="Price: 250 TL" data-tr="Fiyat: 250 TL">Price: 250 TL</p>
+
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- more -->
+      <!-- PRODUCT 2 -->
+      <div
+        class="product-card"
+        data-index="2"
+        data-price="900"
+        data-img="assets/desi-ghee.jpg"
+      >
+        <div class="product-img-container">
+          <img src="assets/desi-ghee.jpg" alt="Olpers Desi Ghee" />
+        </div>
+
+        <div class="product-details">
+          <h3 data-en="Olpers Desi Ghee" data-tr="Sade Yağı">
+            Olpers Desi Ghee
+          </h3>
+
+          <p data-en="Price: 900 TL" data-tr="Fiyat: 900 TL">Price: 900 TL</p>
+
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="product-card"
+        data-index="0"
+        data-price="80"
+        data-name="National Kasuri Methi"
+      >
+        <div class="product-img-container">
+          <img src="assets/national kasuri.jpg" alt="National Kasuri Methi" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Kasuri Methi" data-tr="Kasuri Methi">
+            National Kasuri Methi
+          </h3>
+          <p data-en="Price: 80 TL" data-tr="Fiyat: 80 TL" data-price="80">
+            Price: 80 TL
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gluco Bisket -->
+      <div
+        class="product-card"
+        data-index="2"
+        data-price="40"
+        data-name="Gluco bisket"
+      >
+        <div class="product-img-container">
+          <img src="assets/gluco.jpg" alt="Gluco bisket" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Gluco bisket" data-tr="Gluco bisuvi">Gluco bisket</h3>
+          <p data-en="Price: 40 TL" data-tr="Fiyat: 40 TL" data-price="40">
+            Price: 40 TL
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kali Mirch Powder -->
+      <div
+        class="product-card"
+        data-index="3"
+        data-price="70"
+        data-name="Kali Mirch powder"
+      >
+        <div class="product-img-container">
+          <img src="assets/Teekhi.jpg" alt="Kali Mirch powder" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Kali Mirch powder" data-tr="Karabiber">
+            Kali Mirch powder
+          </h3>
+          <p data-en="Price: 70 TL" data-tr="Fiyat: 70 TL" data-price="70">
+            Price: 70 TL
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Khushbudar Lehsan Powder -->
+      <div
+        class="product-card"
+        data-index="4"
+        data-price="80"
+        data-name="Khushbudar lehsan powder"
+      >
+        <div class="product-img-container">
+          <img src="assets/lehsan.jpg" alt="Lehsan powder" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Lehsan powder" data-tr="Sarımsak tozu">
+            Khushbudar lehsan powder
+          </h3>
+          <p data-en="Price: 80 TL" data-tr="Fiyat: 80 TL" data-price="80">
+            Price: 80 TL
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chili Mili -->
+      <div
+        class="product-card"
+        data-index="5"
+        data-price="10"
+        data-name="Chili Mili"
+      >
+        <div class="product-img-container">
+          <img src="assets/chilli milli.jpg" alt="Chili Mili" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Chili Mili" data-tr="Chili Mili">Chili 🌶️ Mili</h3>
+          <p data-en="Price: 10 TL" data-tr="Fiyat: 10 TL" data-price="10">
+            Price: 10 TL
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jelly -->
+      <div
+        class="product-card"
+        data-index="6"
+        data-price="100"
+        data-name="Jelly"
+      >
+        <div class="product-img-container">
+          <img src="assets/jellyy.jpg" alt="Jelly" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Jelly" data-tr="Jöle">Jelly</h3>
+          <p data-en="Price: 100 TL" data-tr="Fiyat: 100 TL" data-price="100">
+            Price: 100 TL
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nimco Masala Papdi -->
+      <div
+        class="product-card"
+        data-index="7"
+        data-price="100"
+        data-name="Nimco Masala Papdi"
+      >
+        <div class="product-img-container">
+          <img src="assets/papdi.jpg" alt="Nimco Masala Papdi" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Nimco Masala Papdi" data-tr="Nimco Cips">
+            Nimco Masala Papdi
+          </h3>
+          <p data-en="Price: 100 TL" data-tr="Fiyat: 100 TL" data-price="100">
+            Price: 100 TL
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="1" data-price="220">
+        <div class="product-img-container">
+          <img src="assets/rafhan.jpg" alt="Rafhan vanilla custard" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Rafhan vanilla custard" data-tr="Muhallebi">
+            Rafhan vanilla custard
+          </h3>
+          <p data-en="Price: ₹220" data-tr="Fiyat: ₺220">Price: ₹220</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="2" data-price="310">
+        <div class="product-img-container">
+          <img src="assets/pastshan.jpg" alt="Shan ginger garlic paste" />
+        </div>
+        <div class="product-details">
+          <h3
+            data-en="Shan ginger garlic paste"
+            data-tr="Zencefil sarımsak ezmesi"
+          >
+            Shan ginger garlic paste
+          </h3>
+          <p data-en="Price: ₹310" data-tr="Fiyat: ₺310">Price: ₹310</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="3" data-price="310">
+        <div class="product-img-container">
+          <img src="assets/shanimli.jpg" alt="Shantamarind chutney" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Shantamarind chutney" data-tr="Ekşi ezme">
+            Shantamarind chutney
+          </h3>
+          <p data-en="Price: ₹310" data-tr="Fiyat: ₺310">Price: ₹310</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="4" data-price="310">
+        <div class="product-img-container">
+          <img src="assets/shan-garlic.jpg" alt="Shan ginger paste" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Shan ginger paste" data-tr="Zencefil sarımsak ezmesi">
+            Shan ginger paste
+          </h3>
+          <p data-en="Price: ₹310" data-tr="Fiyat: ₺310">Price: ₹310</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="5" data-price="250">
+        <div class="product-img-container">
+          <img src="assets/knorr green.jpg" alt="Knorr Green Chutney" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Knorr Green Chutney" data-tr="Knorr Yeşil Chutney">
+            Knorr Green Chutney
+          </h3>
+          <p data-en="Price: ₹250" data-tr="Fiyat: ₺250">Price: ₹250</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="6" data-price="320">
+        <div class="product-img-container">
+          <img src="assets/mango.jpg" alt="Mango Jam" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Mango Jam" data-tr="Mango reçeli">Mango Jam</h3>
+          <p data-en="Price: ₹320" data-tr="Fiyat: ₺320">Price: ₹320</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="7" data-price="150">
+        <div class="product-img-container">
+          <img src="assets/shan gulab.jpg" alt="Shan gulab Jaman" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Shan gulab Jaman" data-tr="Shan tatlı">
+            Shan gulab Jaman
+          </h3>
+          <p data-en="Price: ₹150" data-tr="Fiyat: ₺150">Price: ₹150</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="8" data-price="250">
+        <div class="product-img-container">
+          <img src="assets/nan.jpg" alt="Nan kathai" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Nan kathai" data-tr="Tatlı">Nan kathai</h3>
+          <p data-en="Price: ₹250" data-tr="Fiyat: ₺250">Price: ₹250</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="9" data-price="70">
+        <div class="product-img-container">
+          <img src="assets/chicken-handi.jpg" alt="Chicken Handi" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Chicken Handi" data-tr="Tavuk baharatı">
+            Chicken Handi
+          </h3>
+          <p data-en="Price: ₹70" data-tr="Fiyat: ₺70">Price: ₹70</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="10" data-price="850">
+        <div class="product-img-container">
+          <img src="assets/nido.jpg" alt="Nido Full cream milk powder" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Nido Full cream milk powder" data-tr="Nido süt tozu">
+            Nido Full cream milk powder
+          </h3>
+          <p data-en="Price: ₹850" data-tr="Fiyat: ₺850">Price: ₹850</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="11" data-price="100">
+        <div class="product-img-container">
+          <img src="assets/mango sachet.jpg" alt="Mango custard" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Mango custard" data-tr="Mango muhallebi">
+            Mango custard
+          </h3>
+          <p data-en="Price: ₹100" data-tr="Fiyat: ₺100">Price: ₹100</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="12" data-price="200">
+        <div class="product-img-container">
+          <img src="assets/faiyza.jpg" alt="Faiza beauty cream" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Faiza beauty cream" data-tr="Yüz kremi">
+            Faiza beauty cream
+          </h3>
+          <p data-en="Price: ₹200" data-tr="Fiyat: ₺200">Price: ₹200</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="13" data-price="150">
+        <div class="product-img-container">
+          <img src="assets/hot sauce.jpg" alt="Hot Sauce" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Hot Sauce" data-tr="Acı sos">Hot Sauce 🌶️</h3>
+          <p data-en="Price: ₹150" data-tr="Fiyat: ₺150">Price: ₹150</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="14" data-price="80">
+        <div class="product-img-container">
+          <img src="assets/turmeric.jpg" alt="Turmeric powder" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Turmeric powder" data-tr="Zerdeçal tozu">
+            Turmeric powder
+          </h3>
+          <p data-en="Price: ₹80" data-tr="Fiyat: ₺80">Price: ₹80</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="15" data-price="260">
+        <div class="product-img-container">
+          <img src="assets/cake rusk.jpg" alt="Cake rusk" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Cake rusk" data-tr="Çay keki">Cake rusk</h3>
+          <p data-en="Price: ₹260" data-tr="Fiyat: ₺260">Price: ₹260</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="16" data-price="230">
+        <div class="product-img-container">
+          <img src="assets/curry powder.jpg" alt="Curry powder" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Curry powder" data-tr="Köri tozu">Curry powder</h3>
+          <p data-en="Price: ₹230" data-tr="Fiyat: ₺230">Price: ₹230</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="17" data-price="450">
+        <div class="product-img-container">
+          <img src="assets/tapal teabags.jpg" alt="Tapal Danedar teabags" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Tapal Danedar teabags" data-tr="Tapal çay poşetleri">
+            Tapal Danedar teabags 💯
+          </h3>
+          <p data-en="Price: ₹450" data-tr="Fiyat: ₺450">Price: ₹450</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="18" data-price="80">
+        <div class="product-img-container">
+          <img src="assets/long.jpg" alt="Long" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Long" data-tr="Karanfiller">Long</h3>
+          <p data-en="Price: ₹80" data-tr="Fiyat: ₺80">Price: ₹80</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="19" data-price="110">
+        <div class="product-img-container">
+          <img src="assets/white peas.jpg" alt="White peas" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="White peas" data-tr="Beyaz bezelye">White peas</h3>
+          <p data-en="Price/kg: ₹110" data-tr="Fiyat/kg: ₺110">
+            Price/kg: ₹110
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="20" data-price="100">
+        <div class="product-img-container">
+          <img src="assets/zeera.jpg" alt="Ponam Zeera Powder" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Zeera Powder" data-tr="Cumin">Ponam Zeera Powder</h3>
+          <p data-en="Price: ₹100" data-tr="Fiyat: ₺100">Price: ₹100</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="21" data-price="100">
+        <div class="product-img-container">
+          <img src="assets/ponam garam.jpg" alt="Ponam Garam masala" />
+        </div>
+        <div class="product-details">
+          <h3
+            data-en="Ponam Garam masala"
+            data-tr="Karabiber, kimyon, karanfil"
+          >
+            Ponam Garam masala
+          </h3>
+          <p data-en="Price: ₹100" data-tr="Fiyat: ₺100">Price: ₹100</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="22" data-price="100">
+        <div class="product-img-container">
+          <img src="assets/haldee.jpg" alt="Ponam Haldi powder" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Ponam Haldi powder" data-tr="Zerdeçal tozu">
+            Ponam Haldi powder
+          </h3>
+          <p data-en="Price: ₹100" data-tr="Fiyat: ₺100">Price: ₹100</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="23" data-price="110">
+        <div class="product-img-container">
+          <img src="assets/green mash.jpg" alt="Green daal mash" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Green daal mash" data-tr="Yeşil püre dal">
+            Green daal mash
+          </h3>
+          <p data-en="Price/kg: ₹110" data-tr="Fiyat/kg: ₺110">
+            Price/kg: ₹110
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="24" data-price="70">
+        <div class="product-img-container">
+          <img src="assets/national qeema.jpg" alt="National Qeema" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="National Qeema" data-tr="National kıyma">
+            National Qeema
+          </h3>
+          <p data-en="Price: ₹70" data-tr="Fiyat: ₺70">Price: ₹70</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="25" data-price="75">
+        <div class="product-img-container">
+          <img src="assets/biryani assence.jpg" alt="Biryani essence" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Biryani essence" data-tr="Biryani kokulu">
+            Biryani essence
+          </h3>
+          <p data-en="Price: ₹75" data-tr="Fiyat: ₺75">Price: ₹75</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="26" data-price="150">
+        <div class="product-img-container">
+          <img src="assets/dadi rice.jpg" alt="Potatoz rice papad" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Potatoz rice papad" data-tr="Kızartma patates">
+            Potatoz rice papad
+          </h3>
+          <p data-en="Price: ₹150" data-tr="Fiyat: ₺150">Price: ₹150</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="27" data-price="150">
+        <div class="product-img-container">
+          <img
+            src="assets/chilli garlic rice.jpg"
+            alt="Chilli garlic rice papad"
+          />
+        </div>
+        <div class="product-details">
+          <h3
+            data-en="Chilli garlic rice papad"
+            data-tr="Sarımsak kızartma patates"
+          >
+            Chilli garlic rice papad
+          </h3>
+          <p data-en="Price: ₹150" data-tr="Fiyat: ₺150">Price: ₹150</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="28" data-price="150">
+        <div class="product-img-container">
+          <img src="assets/zeera rice pappad.jpg" alt="Zeera rice papad" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Zeera rice papad" data-tr="Cumin kızartma patates">
+            Zeera rice papad
+          </h3>
+          <p data-en="Price: ₹150" data-tr="Fiyat: ₺150">Price: ₹150</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="29" data-price="95">
+        <div class="product-img-container">
+          <img src="assets/illaichi.jpg" alt="Green Elaichi" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Green Elaichi" data-tr="Kakule">Green Elaichi</h3>
+          <p data-en="Price: ₹95" data-tr="Fiyat: ₺95">Price: ₹95</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="30" data-price="35">
+        <div class="product-img-container">
+          <img
+            src="assets/tikka seekh sachet.jpg"
+            alt="Tikka seekh kabab sachet"
+          />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Tikka seekh sachet" data-tr="Kabab için">
+            Tikka seekh kabab sachet
+          </h3>
+          <p data-en="Price: ₹35" data-tr="Fiyat: ₺35">Price: ₹35</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="31" data-price="310">
+        <div class="product-img-container">
+          <img src="assets/dadi.jpg" alt="Pani Puri" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Pani Puri" data-tr="Pani Puri">Pani Puri</h3>
+          <p data-en="Price: ₹310" data-tr="Fiyat: ₺310">Price: ₹310</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="32" data-price="220">
+        <div class="product-img-container">
+          <img src="assets/conflour.jpg" alt="Cornflour" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Cornflour" data-tr="Mısır unu">Cornflour</h3>
+          <p data-en="Price: ₹220" data-tr="Fiyat: ₺220">Price: ₹220</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="33" data-price="200">
+        <div class="product-img-container">
+          <img src="assets/sarso oil.jpg" alt="Mustard oil" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Mustard oil" data-tr="Hardal yağı">Mustard oil</h3>
+          <p data-en="Price/200ml: ₹200" data-tr="Fiyat/200ml: ₺200">
+            Price/200ml: ₹200
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="34" data-price="120">
+        <div class="product-img-container">
+          <img src="assets/rainbow.jpg" alt="Rainbow Evaporated milk" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Evaporated milk" data-tr="Buharlaştırılmış süt">
+            Rainbow Evaporated milk
+          </h3>
+          <p data-en="Price: ₹120" data-tr="Fiyat: ₺120">Price: ₹120</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="35" data-price="450">
+        <div class="product-img-container">
+          <img src="assets/adam.jpg" alt="Adam desi ghee" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Adam desi ghee" data-tr="Sade yağ">Adam Desi Ghee</h3>
+          <p data-en="Price/500g: ₹450" data-tr="Fiyat/500g: ₺450">
+            Price/500g: ₹450
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="36" data-price="100">
+        <div class="product-img-container">
+          <img src="assets/zaiyaqa.jpg" alt="Flavored Chicken Zaiqa Powder" />
+        </div>
+        <div class="product-details">
+          <h3
+            data-en="Flavored chicken Zaiqa powder"
+            data-tr="Tavuk çorbası için"
+          >
+            Flavored Chicken Zaiqa Powder
+          </h3>
+          <p data-en="Price: ₹100" data-tr="Fiyat: ₺100">Price: ₹100</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="37" data-price="230">
+        <div class="product-img-container">
+          <img src="assets/ahmadteaçjpg.txt" alt="Cardamom green tea 🍵" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Cardamom green tea" data-tr="Yeşil çay">
+            Cardamom green tea
+          </h3>
+          <p data-en="Price: ₹230" data-tr="Fiyat: ₺230">Price: ₹230</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="38" data-price="200">
+        <div class="product-img-container">
+          <img src="assets/lubiya.jpg" alt="Laal Lobia" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Laal Lobia" data-tr="Kırmızı fasulye">Laal Lobia</h3>
+          <p data-en="Price/kg: ₹200" data-tr="Fiyat/kg: ₺200">
+            Price/kg: ₹200
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="39" data-price="85">
+        <div class="product-img-container">
+          <img src="assets/kalonji.jpg" alt="Kalonji" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Kalonji" data-tr="Çörek otu">Kalonji</h3>
+          <p data-en="Price: ₹85" data-tr="Fiyat: ₺85">Price: ₹85</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="40" data-price="40">
+        <div class="product-img-container">
+          <img src="assets/3ın1çjpj.txt" alt="Tapal Danedar sachets" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Tapal Danedar sachets" data-tr="Tapal çay poşet">
+            Tapal Danedar sachets
+          </h3>
+          <p data-en="Price/1: ₹40" data-tr="Fiyat/1: ₺40">Price/1: ₹40</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="41" data-price="65">
+        <div class="product-img-container">
+          <img src="assets/detol.jpg" alt="Dettol Soap" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Dettol Soap" data-tr="Dettol Sabun">Dettol Soap</h3>
+          <p data-en="Price/1: ₹65" data-tr="Fiyat/1: ₺65">Price/1: ₹65</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="42" data-price="220">
+        <div class="product-img-container">
+          <img src="assets/mang-tang.jpg" alt="Mango Tang" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Mango Tang" data-tr="Tang">Mango Tang</h3>
+          <p data-en="Price: ₹220" data-tr="Fiyat: ₺220">Price: ₹220</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="43" data-price="700">
+        <div class="product-img-container">
+          <img src="assets/family.jpg" alt="Tapal Family Mixture Tea" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Tapal Family Mixture Tea" data-tr="Tapal Family çay">
+            Tapal Family Mixture Tea
+          </h3>
+          <p data-en="Price/900g: ₹700" data-tr="Fiyat/900g: ₺700">
+            Price/900g: ₹700
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="44" data-price="350">
+        <div class="product-img-container">
+          <img src="assets/family-small.jpg" alt="Tapal Family Mixture Tea" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Tapal Family Mixture Tea" data-tr="Tapal Family çay">
+            Tapal Family Mixture Tea
+          </h3>
+          <p data-en="Price/430g: ₹350" data-tr="Fiyat/430g: ₺350">
+            Price/430g: ₹350
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="45" data-price="130">
+        <div class="product-img-container">
+          <img src="assets/sabit.jpg" alt="Sabit Garam Masala" />
+        </div>
+        <div class="product-details">
+          <h3
+            data-en="Sabit Garam Masala"
+            data-tr="Karabiber, kimyon, karanfil, kakûle gibi çekilmiş baharatlardan ibaret"
+          >
+            sabit garam masala
+          </h3>
+          <p data-en="Price: ₹130" data-tr="Fiyat: ₺130">Price: ₹130</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="46" data-price="120">
+        <div class="product-img-container">
+          <img src="assets/ponam garam.jpg" alt="Garam Masala Powder" />
+        </div>
+        <div class="product-details">
+          <h3
+            data-en="Garam Masala Powder"
+            data-tr="Karabiber, kimyon, karanfil, kakûle gibi çekilmiş baharatlardan ibaret tozu"
+          >
+            garam masala powder
+          </h3>
+          <p data-en="Price: ₹120" data-tr="Fiyat: ₺120">Price: ₹120</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="47" data-price="75">
+        <div class="product-img-container">
+          <img src="assets/sabit dhaniya.jpg" alt="Ponam sabit Dhaniya" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Ponam sabit Dhaniya" data-tr="Kişniş tozu">
+            Ponam sabit Dhaniya
+          </h3>
+          <p data-en="Price: ₹75" data-tr="Fiyat: ₺75">Price: ₹75</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="48" data-price="600">
+        <div class="product-img-container">
+          <img src="assets/gulabjaman.jpg" alt="Dilpasand Gulab jaman" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Dilpasand Gulab jaman" data-tr="Dilpasand tatlı">
+            Dilpasand Gulab jaman
+          </h3>
+          <p data-en="Price: ₹600" data-tr="Fiyat: ₺600">Price: ₹600</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="49" data-price="400">
+        <div class="product-img-container">
+          <img src="assets/everyday.jpg" alt="Everyday Milk powder" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Everyday Milk powder" data-tr="Süt tozu">
+            Everyday Milk powder
+          </h3>
+          <p data-en="Price/350g: ₹400" data-tr="Fiyat/350g: ₺400">
+            Price/350g: ₹400
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="50" data-price="800">
+        <div class="product-img-container">
+          <img src="assets/everydaybig.jpg" alt="Everyday Milk powder" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Everyday Milk powder" data-tr="Süt tozu">
+            Everyday Milk powder
+          </h3>
+          <p data-en="Price/850g: ₹800" data-tr="Fiyat/850g: ₺800">
+            Price/850g: ₹800
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="51" data-price="75">
+        <div class="product-img-container">
+          <img src="assets/imli.jpg" alt="Imli" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Imli" data-tr="Imli">Imli</h3>
+          <p data-en="Price/100g: ₹75" data-tr="Fiyat/100g: ₺75">
+            Price/100g: ₹75
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="52" data-price="70">
+        <div class="product-img-container">
+          <img src="assets/badiyan.jpg" alt="Badian Ka Phool" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Badian Ka Phool" data-tr="Badian Ka Phool">
+            Badian Ka Phool
+          </h3>
+          <p data-en="Price: ₹70" data-tr="Fiyat: ₺70">Price: ₹70</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="53" data-price="300">
+        <div class="product-img-container">
+          <img src="assets/shangreenchutney.jpg" alt="Shan green chutney" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Shan green chutney" data-tr="Yeşil Hint turşusu">
+            Shan green chutney
+          </h3>
+          <p data-en="Price: ₹300" data-tr="Fiyat: ₺300">Price: ₹300</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="54" data-price="100">
+        <div class="product-img-container">
+          <img src="assets/chilli.jpg" alt="Kutti Laal mirch" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Kutti Laal mirch" data-tr="Sırı acı biber tozu">
+            Kutti Laal mirch
+          </h3>
+          <p data-en="Price: ₹100" data-tr="Fiyat: ₺100">Price: ₹100</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="55" data-price="450">
+        <div class="product-img-container">
+          <img src="assets/lıptonçjpg.jpg" alt="Lipton Yellow Label" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Lipton Yellow Label" data-tr="Lipton çay">
+            Lipton Yellow Label
+          </h3>
+          <p data-en="Price: ₹450" data-tr="Fiyat: ₺450">Price: ₹450</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="56" data-price="90">
+        <div class="product-img-container">
+          <img src="assets/jaifal.jpg" alt="Jaifal" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Jaifal" data-tr="Jaifal">Jaifal</h3>
+          <p data-en="Price: ₹90" data-tr="Fiyat: ₺90">Price: ₹90</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="57" data-price="75">
+        <div class="product-img-container">
+          <img src="assets/Kewra.jpg" alt="Kewra" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Kewra" data-tr="Kewra">Kewra</h3>
+          <p data-en="Price: ₹75" data-tr="Fiyat: ₺75">Price: ₹75</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="58" data-price="135">
+        <div class="product-img-container">
+          <img src="assets/tez.jpg" alt="Tez Lal mirch powder" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Tez Lal mirch powder" data-tr="Tez Lal mirch powder">
+            Tez Lal mirch powder
+          </h3>
+          <p data-en="Price: ₹135" data-tr="Fiyat: ₺135">Price: ₹135</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="59" data-price="250">
+        <div class="product-img-container">
+          <img src="assets/achari.jpg" alt="Achari Mango sauce" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Achari Mango sauce" data-tr="Sos">Achari Mango sauce</h3>
+          <p data-en="Price: ₹250" data-tr="Fiyat: ₺250">Price: ₹250</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="60" data-price="550">
+        <div class="product-img-container">
+          <img
+            src="assets/national-crushed.jpg"
+            alt="National crushed pickle mix"
+          />
+        </div>
+        <div class="product-details">
+          <h3 data-en="National crushed pickle mix" data-tr="Sos">
+            National crushed pickle mix
+          </h3>
+          <p data-en="Price: ₹550" data-tr="Fiyat: ₺550">Price: ₹550</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="61" data-price="280">
+        <div class="product-img-container">
+          <img src="assets/mixed.jpg" alt="National mix pickle" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="National mix pickle" data-tr="Sos">
+            National mix pickle
+          </h3>
+          <p data-en="Price: ₹280" data-tr="Fiyat: ₺280">Price: ₹280</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="62" data-price="500">
+        <div class="product-img-container">
+          <img src="assets/jame.jpg" alt="Jam-e-shirin" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Jam-e-shirin" data-tr="İçecek">Jam-e-shirin</h3>
+          <p data-en="Price: ₹500" data-tr="Fiyat: ₺500">Price: ₹500</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="63" data-price="500">
+        <div class="product-img-container">
+          <img src="assets/rooh.jpg" alt="Rooh Afza" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Rooh Afza" data-tr="İçecek">Rooh Afza</h3>
+          <p data-en="Price: ₹500" data-tr="Fiyat: ₺500">Price: ₹500</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="64" data-price="120">
+        <div class="product-img-container">
+          <img src="assets/henna.jpg" alt="Mehndi cone" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Mehndi cone" data-tr="Kına">Mehndi cone</h3>
+          <p data-en="Price: ₹120" data-tr="Fiyat: ₺120">Price: ₹120</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="65" data-price="150">
+        <div class="product-img-container">
+          <img src="assets/hairdye.jpg" alt="Henna powder hair dye" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Henna powder hair dye" data-tr="Kına">
+            Henna powder hair dye
+          </h3>
+          <p data-en="Price: ₹150" data-tr="Fiyat: ₺150">Price: ₹150</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="66" data-price="200">
+        <div class="product-img-container">
+          <img src="assets/ispaghol.jpg" alt="Ispaghol" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Ispaghol" data-tr="Psyllium kabuğu">Ispaghol</h3>
+          <p data-en="Price: ₹200" data-tr="Fiyat: ₺200">Price: ₹200</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="67" data-price="150">
+        <div class="product-img-container">
+          <img src="assets/alfajer.jpg" alt="Alfajr Condensed milk" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Alfajr Condensed milk" data-tr="Yoğunlaştırılmış süt">
+            Alfajr Condensed milk
+          </h3>
+          <p data-en="Price: ₹150" data-tr="Fiyat: ₺150">Price: ₹150</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="68" data-price="150">
+        <div class="product-img-container">
+          <img src="assets/sweet.jpg" alt="Condensed milk" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Condensed milk" data-tr="Yoğunlaştırılmış süt">
+            Condensed milk
+          </h3>
+          <p data-en="Price: ₹150" data-tr="Fiyat: ₺150">Price: ₹150</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="69" data-price="135">
+        <div class="product-img-container">
+          <img src="assets/firini.jpg" alt="Laziza firini" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Laziza firini" data-tr="Laziza gerçek">Laziza firini</h3>
+          <p data-en="Price: ₹135" data-tr="Fiyat: ₺135">Price: ₹135</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="70" data-price="135">
+        <div class="product-img-container">
+          <img src="assets/kheer.jpg" alt="Laziza Kheer" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Laziza Kheer" data-tr="Laziza gerçek">Laziza Kheer</h3>
+          <p data-en="Price: ₹135" data-tr="Fiyat: ₺135">Price: ₹135</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="71" data-price="135">
+        <div class="product-img-container">
+          <img src="assets/sheerkhurma.jpg" alt="Laziza sheer khurma" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Laziza sheer khurma" data-tr="Laziza gerçek">
+            Laziza sheer khurma
+          </h3>
+          <p data-en="Price: ₹135" data-tr="Fiyat: ₺135">Price: ₹135</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="72" data-price="135">
+        <div class="product-img-container">
+          <img src="assets/shangulabj.jpg" alt="Shan gulab Jaman" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Shan gulab Jaman" data-tr="Shan tatlı">
+            Shan gulab Jaman
+          </h3>
+          <p data-en="Price: ₹135" data-tr="Fiyat: ₺135">Price: ₹135</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="73" data-price="250">
+        <div class="product-img-container">
+          <img src="assets/knorr green.jpg" alt="Knorr green chutney" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Knorr green chutney" data-tr="Sos">
+            Knorr green chutney
+          </h3>
+          <p data-en="Price: ₹250" data-tr="Fiyat: ₺250">Price: ₹250</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="74" data-price="250">
+        <div class="product-img-container">
+          <img src="assets/knorrgarlıc.jpg" alt="Knorr chilli garlic sauce" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Knorr chilli garlic sauce" data-tr="Sos">
+            Knorr chilli garlic sauce
+          </h3>
+          <p data-en="Price: ₹250" data-tr="Fiyat: ₺250">Price: ₹250</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="75" data-price="250">
+        <div class="product-img-container">
+          <img src="assets/pizza.jpg" alt="Shangrilla pizza sauce" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Shangrilla pizza sauce" data-tr="Sos">
+            Shangrilla pizza sauce
+          </h3>
+          <p data-en="Price: ₹250" data-tr="Fiyat: ₺250">Price: ₹250</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="76" data-price="75">
+        <div class="product-img-container">
+          <img src="assets/biryani assence.jpg" alt="Biryani essence" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Biryani essence" data-tr="Sos">Biryani essence</h3>
+          <p data-en="Price: ₹75" data-tr="Fiyat: ₺75">Price: ₹75</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="77" data-price="80">
+        <div class="product-img-container">
+          <img src="assets/sonf.jpg" alt="Sonf" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Sonf" data-tr="Sos">Sonf</h3>
+          <p data-en="Price: ₹80" data-tr="Fiyat: ₺80">Price: ₹80</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="78" data-price="250">
+        <div class="product-img-container">
+          <img src="assets/lalpyaz.jpg" alt="Ponam lal piyaz" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Ponam lal piyaz" data-tr="Kızarmış soğan">
+            Ponam lal piyaz
+          </h3>
+          <p data-en="Price: ₹250" data-tr="Fiyat: ₺250">Price: ₹250</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="79" data-price="100">
+        <div class="product-img-container">
+          <img src="assets/mixnimco.jpg" alt="Nimco mix" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Nimco mix" data-tr="Aci cips">Nimco mix</h3>
+          <p data-en="Price: ₹100" data-tr="Fiyat: ₺100">Price: ₹100</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="80" data-price="100">
+        <div class="product-img-container">
+          <img src="assets/gaathia.jpg" alt="Gaathia" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Gaathia" data-tr="Aci cips">Gaathia</h3>
+          <p data-en="Price: ₹100" data-tr="Fiyat: ₺100">Price: ₹100</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="81" data-price="100">
+        <div class="product-img-container">
+          <img src="assets/dalsev.jpg" alt="Dal Sev" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Dal Sev" data-tr="Aci cips">Dal Sev</h3>
+          <p data-en="Price: ₹100" data-tr="Fiyat: ₺100">Price: ₹100</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="82" data-price="100">
+        <div class="product-img-container">
+          <img src="assets/meethachewra.jpg" alt="Meetha Chewra" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Meetha Chewra" data-tr="Aci cips">Meetha Chewra</h3>
+          <p data-en="Price: ₹100" data-tr="Fiyat: ₺100">Price: ₹100</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="83" data-price="150">
+        <div class="product-img-container">
+          <img src="assets/kishmish.jpg" alt="Pilau Kishmish" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Pilau Kishmish" data-tr="Kuru üzüm">Pilau Kishmish</h3>
+          <p data-en="Price/500g: ₹150" data-tr="Fiyat/500g: ₺150">
+            Price/500g: ₹150
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="84" data-price="75">
+        <div class="product-img-container">
+          <img src="assets/chaat.jpg" alt="Shan Chaat Masala" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Shan Chaat Masala" data-tr="Baharatı">
+            Shan Chaat Masala
+          </h3>
+          <p data-en="Price: ₹75" data-tr="Fiyat: ₺75">Price: ₹75</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="85" data-price="120">
+        <div class="product-img-container">
+          <img src="assets/nchaat.jpg" alt="National Chaat Masala" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="National Chaat Masala" data-tr="Baharatı">
+            National Chaat Masala
+          </h3>
+          <p data-en="Price: ₹120" data-tr="Fiyat: ₺120">Price: ₹120</p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="86" data-price="200">
+        <div class="product-img-container">
+          <img src="assets/greentea.jpg" alt="Green Tea" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="Green Tea" data-tr="Yeşil çay">Green Tea</h3>
+          <p data-en="Price/250g: ₹200" data-tr="Fiyat/250g: ₺200">
+            Price/250g: ₹200
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="87" data-price="500">
+        <div class="product-img-container">
+          <img src="assets/akk.jpg" alt="basmati rice" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="basmati rice" data-tr="basmati pirinç">basmati rice</h3>
+          <p data-en="Price/5kg: ₹500" data-tr="Fiyat/5kg: ₺500">
+            Price/5kg: ₹500
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-index="88" data-price="500">
+        <div class="product-img-container">
+          <img src="assets/sella.jpg" alt="sella rice" />
+        </div>
+        <div class="product-details">
+          <h3 data-en="sella rice" data-tr="sella pirinç">Sella rice</h3>
+          <p data-en="Price/5kg: ₹500" data-tr="Fiyat/5kg: ₺500">
+            Price/5kg: ₹500
+          </p>
+          <div class="order-controls">
+            <input type="number" min="1" value="1" class="qty" />
+            <button
+              class="add-btn"
+              data-en="Add to Order"
+              data-tr="Sepete Ekle"
+            >
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- more -->
+    </div>
+
+    <!-- Cart & Checkout -->
+    <div class="container" id="cartContainer" style="display: none">
+      <h2 id="cartHeading">Your Cart</h2>
+      <div id="cartItems"></div>
+
+      <h2>Your Details</h2>
+      <form id="orderForm">
+        <label id="orderFormName">Full Name</label>
+        <input type="text" id="customerName" required />
+
+        <label id="orderFormPhone">Phone Number</label>
+        <input type="text" id="customerPhone" required />
+
+        <label id="orderFormAddress">Address</label>
+        <textarea id="customerAddress" rows="3" required></textarea>
+      </form>
+
+      <button id="checkoutBtn" onclick="checkout()">Submit Order</button>
+    </div>
+
+    <footer>
+      <p>AK Özgrup | Ankara, Türkiye</p>
+      <p>Contact: +90 506 359 12 84</p>
+    </footer>
+
+    <!-- Toast -->
+    <div id="custom-toast" class="toast">✅ Your order has been sent!</div>
+    <div id="order-msg" class="order-message">Order added successfully!</div>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
