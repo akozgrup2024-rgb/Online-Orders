@@ -13,7 +13,9 @@
   <body>
     <header>
       <img src="assets/ak-logo.png" alt="Company Logo" />
-      <h1>Ak Özgrup Online Store</h1>
+      <h1 data-en="Welcome to AK Özgrup" data-tr="AK Özgrup'a Hoşgeldiniz">
+        Welcome to AK Özgrup
+      </h1>
 
       <!-- Language Buttons -->
       <div class="lang-container">
@@ -2654,22 +2656,41 @@
 
     <!-- Cart & Checkout -->
     <div class="container" id="cartContainer" style="display: none">
-      <h2 id="cartHeading">Your Cart</h2>
+      <h2 data-en="Your Cart" data-tr="Sepetiniz">Your Cart</h2>
       <div id="cartItems"></div>
 
-      <h2>Your Details</h2>
+      <h2 data-en="Your Details" data-tr="Bilgileriniz">Your Details</h2>
       <form id="orderForm">
-        <label id="orderFormName">Full Name</label>
+        <label for="customerName" data-en="Full Name" data-tr="Ad Soyad"
+          >Full Name</label
+        >
+
         <input type="text" id="customerName" required />
 
-        <label id="orderFormPhone">Phone Number</label>
+        <label
+          for="customerPhone"
+          data-en="Phone Number"
+          data-tr="Telefon Numarası"
+          >Phone Number</label
+        >
+
         <input type="text" id="customerPhone" required />
 
-        <label id="orderFormAddress">Address</label>
+        <label for="customerAddress" data-en="Address" data-tr="Adres"
+          >Address</label
+        >
+
         <textarea id="customerAddress" rows="3" required></textarea>
       </form>
 
-      <button id="checkoutBtn" onclick="checkout()">Submit Order</button>
+      <button
+        id="checkoutBtn"
+        data-en="Submit Order"
+        data-tr="Siparişi Gönder"
+        onclick="checkout()"
+      >
+        Submit Order
+      </button>
     </div>
 
     <footer>
@@ -2684,6 +2705,6 @@
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Custom JS -->
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>

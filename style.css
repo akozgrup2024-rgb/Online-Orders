@@ -73,25 +73,30 @@ header h1 {
     opacity: 1;
   }
 }
-.lang-btn {
+.lang-container {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  gap: 10px;
+  z-index: 999; /* ensure above header */
+}
+
+.lang-btn {
   padding: 8px 18px;
   border: none;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.22);
   color: white;
-  font-size: 14px;
   cursor: pointer;
   backdrop-filter: blur(6px);
   transition: 0.3s;
-  z-index: 10;
 }
 .lang-btn:hover {
   background: rgba(255, 255, 255, 0.38);
   transform: scale(1.05);
 }
+
 .hero {
   background: url("assets/hero-bg.jpg") center/cover no-repeat;
   text-align: center;
