@@ -41,6 +41,10 @@ header::after {
   bottom: -60px;
   right: -60px;
 }
+header::before,
+header::after {
+  pointer-events: none;
+}
 header img {
   height: 130px;
   position: relative;
@@ -79,7 +83,8 @@ header h1 {
   right: 30px;
   display: flex;
   gap: 10px;
-  z-index: 999; /* ensure above header */
+  z-index: 9999; /* higher than pseudo elements */
+  pointer-events: auto; /* ensure buttons are clickable */
 }
 
 .lang-btn {
