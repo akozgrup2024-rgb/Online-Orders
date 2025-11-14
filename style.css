@@ -285,12 +285,12 @@ footer {
   font-weight: 500;
 }
 @media (max-width: 768px) {
-  .hero {
-    font-size: 28px;
-    padding: 50px 15px;
-  }
-  .product-img-container img {
-    height: 180px;
+  .lang-container {
+    position: relative;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
   }
 }
 
