@@ -7,10 +7,15 @@ emailjs.init("1V6iYSsUr5Ua0PmXF");
 // Global variables
 // ==============================
 let cart = [];
-let currentLang = "en"; // default language
+let currentLang = "en";
+let deliveryPrice = 0;
+
+// Shop Location (your shop)
+const shopLat = 39.96596;
+const shopLng = 32.94215;
 
 // ==============================
-// Translations for alerts and messages
+// Translations
 // ==============================
 const translations = {
   en: {
@@ -19,9 +24,6 @@ const translations = {
     fillDetails: "Please fill all details",
     orderSent: "Your order has been sent!",
     failedEmail: "Failed to send email. Check your EmailJS keys.",
-    testEmailSent: "Test email sent successfully!",
-    testEmailFailed:
-      "Test email failed. Check your keys, service, and template.",
   },
   tr: {
     orderAdded: "siparişinize eklendi!",
@@ -29,14 +31,11 @@ const translations = {
     fillDetails: "Lütfen tüm bilgileri doldurun",
     orderSent: "Siparişiniz gönderildi!",
     failedEmail: "E-posta gönderilemedi. EmailJS anahtarlarını kontrol edin.",
-    testEmailSent: "Test e-postası başarıyla gönderildi!",
-    testEmailFailed:
-      "Test e-postası gönderilemedi. Anahtarları, servis ve şablonu kontrol edin.",
   },
 };
 
 // ==============================
-// Wait for DOM to load
+// DOM LOAD
 // ==============================
 document.addEventListener("DOMContentLoaded", () => {
   const orderMsg = document.getElementById("order-msg");
@@ -48,35 +47,29 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       currentLang = btn.dataset.lang;
-      updateLanguage(currentLang); // update page content
-      updateCart(); // update cart names in the correct language
+      updateLanguage(currentLang);
+      updateCart();
     });
   });
 
-  // ==============================
-  // Update page content dynamically
-  // ==============================
   function updateLanguage(lang) {
     document.querySelectorAll("[data-en]").forEach((el) => {
       if (el.dataset[lang]) el.innerText = el.dataset[lang];
     });
   }
 
-  // ==============================
-  // Show order message
-  // ==============================
   function showOrderMessage(productEl) {
     const productName =
       productEl.dataset[`name${currentLang.toUpperCase()}`] ||
       productEl.dataset.name;
-    if (!orderMsg) return;
+
     orderMsg.innerText = `${productName} ${translations[currentLang].orderAdded}`;
     orderMsg.classList.add("show");
     setTimeout(() => orderMsg.classList.remove("show"), 2000);
   }
 
   // ==============================
-  // Add to Cart
+  // ADD TO CART
   // ==============================
   document.querySelectorAll(".add-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -95,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ==============================
-  // Cart Operations
+  // CART FUNCTIONS
   // ==============================
   function removeItem(i) {
     cart.splice(i, 1);
@@ -108,10 +101,103 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCart();
   }
 
+  window.removeItem = removeItem;
+  window.changeQty = changeQty;
+
+  // ==============================
+  // DELIVERY CALCULATION
+  // ==============================
+  function toRad(x) {
+    return (x * Math.PI) / 180;
+  }
+
+  function calculateDistance(lat2, lng2) {
+    const R = 6371; // km
+    const dLat = toRad(lat2 - shopLat);
+    const dLng = toRad(lng2 - shopLng);
+
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(toRad(shopLat)) *
+        Math.cos(toRad(lat2)) *
+        Math.sin(dLng / 2) *
+        Math.sin(dLng / 2);
+
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c; // km
+  }
+
+  async function geocodeAddress(address) {
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
+      address
+    )}`;
+
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (data.length === 0) return null;
+
+    return { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
+  }
+
+  async function updateDeliveryPrice() {
+    const method = document.querySelector(
+      'input[name="deliveryMethod"]:checked'
+    ).value;
+    const deliveryBox = document.getElementById("deliveryCostBox");
+
+    if (method === "ptt") {
+      deliveryPrice = 0;
+      deliveryBox.style.display = "none";
+      updateCart();
+      return;
+    }
+
+    const address = document.getElementById("customerAddress").value.trim();
+
+    if (!address) {
+      deliveryPrice = 0;
+      document.getElementById("deliveryCost").innerText = "0 TL";
+      deliveryBox.style.display = "flex";
+      updateCart();
+      return;
+    }
+
+    const coords = await geocodeAddress(address);
+    if (!coords) {
+      deliveryPrice = 0;
+      document.getElementById("deliveryCost").innerText = "0 TL";
+      deliveryBox.style.display = "flex";
+      updateCart();
+      return;
+    }
+
+    const distance = calculateDistance(coords.lat, coords.lng);
+    deliveryPrice = Math.round(distance * 39); // 39 TL per km
+    document.getElementById("deliveryCost").innerText = deliveryPrice + " TL";
+    deliveryBox.style.display = "flex";
+    updateCart();
+  }
+
+  // Recalculate delivery price when method changes
+  document.querySelectorAll('input[name="deliveryMethod"]').forEach((radio) => {
+    radio.addEventListener("change", updateDeliveryPrice);
+  });
+
+  // Recalculate delivery price live while typing
+  const addressInput = document.getElementById("customerAddress");
+  let typingTimer;
+  addressInput.addEventListener("input", () => {
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(updateDeliveryPrice, 700); // wait 700ms after typing stops
+  });
+
+  // ==============================
+  // UPDATE CART DISPLAY
+  // ==============================
   function updateCart() {
     const cartBox = document.getElementById("cartContainer");
     const cartItems = document.getElementById("cartItems");
-    if (!cartBox || !cartItems) return;
 
     if (cart.length === 0) {
       cartBox.style.display = "none";
@@ -119,6 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     cartBox.style.display = "block";
+
     let total = 0;
 
     cartItems.innerHTML = cart
@@ -133,11 +220,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return `
           <div class="cart-item">
             <strong>${displayName}</strong><br>
-            Qty: 
-            <button onclick="changeQty(${i},-1)">-</button>
+            Qty: <button onclick="changeQty(${i},-1)">-</button>
             ${p.qty}
-            <button onclick="changeQty(${i},1)">+</button>
-            <br>
+            <button onclick="changeQty(${i},1)">+</button><br>
             Price: ${p.qty * p.price} TL<br>
             <button onclick="removeItem(${i})" style="background:#ff4444;color:white;">Remove</button>
           </div>
@@ -145,13 +230,25 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .join("");
 
-    cartItems.innerHTML += `<h3>Total: ${total} TL</h3>`;
+    // Include delivery price in total
+    const finalTotal = total + deliveryPrice;
+
+    // Show delivery cost in cart
+    const method = document.querySelector(
+      'input[name="deliveryMethod"]:checked'
+    ).value;
+    let deliveryText = method === "ptt" ? "0 TL" : deliveryPrice + " TL";
+
+    cartItems.innerHTML += `
+      <h4>Delivery: ${deliveryText}</h4>
+      <h3>Total: ${finalTotal} TL</h3>
+    `;
   }
 
   // ==============================
-  // Checkout
+  // CHECKOUT
   // ==============================
-  function checkout() {
+  async function checkout() {
     if (cart.length === 0) {
       alert(translations[currentLang].cartEmpty);
       return;
@@ -160,16 +257,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = document.getElementById("customerName").value.trim();
     const phone = document.getElementById("customerPhone").value.trim();
     const address = document.getElementById("customerAddress").value.trim();
+    const method = document.querySelector(
+      'input[name="deliveryMethod"]:checked'
+    ).value;
 
     if (!name || !phone || !address) {
       alert(translations[currentLang].fillDetails);
       return;
     }
 
+    await updateDeliveryPrice();
+
+    const productTotal = cart.reduce(
+      (sum, item) => sum + item.qty * item.price,
+      0
+    );
+    const finalTotal = productTotal + deliveryPrice;
+
     const orderData = {
       customer_name: name,
       customer_phone: phone,
       customer_address: address,
+      delivery_method:
+        method === "ptt"
+          ? "PTT Cargo"
+          : `AK Özgrup Delivery ( ${deliveryPrice} TL )`,
+      delivery_fee: deliveryPrice + " TL",
       order_items: cart
         .map((item) => {
           const card = document.querySelector(
@@ -181,60 +294,31 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .join("\n"),
       order_time: new Date().toLocaleString(),
-      total_price: cart.reduce((sum, item) => sum + item.qty * item.price, 0),
+      total_price: finalTotal,
     };
 
     emailjs
       .send("service_bc3uehl", "template_hwustb8", orderData)
       .then(() => {
         const toast = document.getElementById("custom-toast");
-        if (toast) {
-          toast.innerText = "✅ " + translations[currentLang].orderSent;
-          toast.classList.add("show");
-          setTimeout(() => toast.classList.remove("show"), 3000);
-        }
+        toast.innerText = "✅ " + translations[currentLang].orderSent;
+        toast.classList.add("show");
+
+        setTimeout(() => toast.classList.remove("show"), 3000);
 
         cart = [];
+        deliveryPrice = 0;
         updateCart();
 
-        const orderForm = document.getElementById("orderForm");
-        if (orderForm) orderForm.reset();
+        document.getElementById("orderForm").reset();
+        document.getElementById("deliveryCostBox").style.display = "none";
       })
       .catch(() => alert(translations[currentLang].failedEmail));
   }
 
-  // ==============================
-  // Attach checkout button listener
-  // ==============================
   if (checkoutBtn) {
     checkoutBtn.addEventListener("click", checkout);
   }
 
-  // ==============================
-  // Test Email (optional)
-  // ==============================
-  window.testEmail = function () {
-    const testData = {
-      customer_name: "Test User",
-      customer_phone: "1234567890",
-      customer_address: "Test Address",
-      order_items: "1x Product = 100 TL",
-      order_time: new Date().toLocaleString(),
-      total_price: "100",
-    };
-
-    emailjs
-      .send("service_l7rjly4", "template_hwusb8", testData)
-      .then(() => alert(translations[currentLang].testEmailSent))
-      .catch(() => alert(translations[currentLang].testEmailFailed));
-  };
-
-  // ==============================
-  // Expose cart functions globally
-  // ==============================
-  window.removeItem = removeItem;
-  window.changeQty = changeQty;
-
-  // Initialize language on page load
   updateLanguage(currentLang);
 });

@@ -2680,6 +2680,41 @@
         >
 
         <textarea id="customerAddress" rows="3" required></textarea>
+
+        <!-- new code -->
+        <div class="delivery-section">
+          <h3 data-en="Delivery Method" data-tr="Teslimat Yöntemi">
+            Delivery Method
+          </h3>
+
+          <label>
+            <input type="radio" name="deliveryMethod" value="ptt" checked />
+            <span data-en="PTT Cargo Delivery" data-tr="PTT Kargo Teslimatı">
+              PTT Cargo Delivery
+            </span>
+          </label>
+
+          <label>
+            <input type="radio" name="deliveryMethod" value="ak" />
+            <span
+              data-en="AK Özgrup Same-Day Delivery (40 TL/km)"
+              data-tr="AK Özgrup Aynı Gün Teslimat (40 TL/km)"
+            >
+              AK Özgrup Same-Day Delivery (40 TL/km)
+            </span>
+          </label>
+
+          <div id="deliveryCostBox" style="display: none">
+            <strong
+              data-en="Estimated Delivery Cost:"
+              data-tr="Tahmini Teslimat Ücreti:"
+            >
+              Estimated Delivery Cost:
+            </strong>
+            <span id="deliveryCost">0 TL</span>
+          </div>
+        </div>
+        <!-- new code -->
       </form>
 
       <button
